@@ -29,6 +29,8 @@ jobs:
           java-version: 17
       - name: Deploy to GitHub Packages
         env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGES_RW_ACTOR: ${{ secrets.PACKAGES_RW_ACTOR }}
           PACKAGES_RW_TOKEN: ${{ secrets.PACKAGES_RW_TOKEN }}
-        run: ./mvnw -s settings.xml -B -DskipTests deploy
+        run: ./mvnw -B -DskipTests deploy
