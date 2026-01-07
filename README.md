@@ -1,1 +1,3 @@
-# rimfrost-kogito
+# rimfrost-common
+
+Gemensamma definitioner för Rimfrost. 
