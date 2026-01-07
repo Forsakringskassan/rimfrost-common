@@ -14,12 +14,17 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Rimfrost Common definitions</name>
-
+    <repositories>
+        <repository>
+            <id>github--Forsakringskassan--repository</id>
+            <url>https://maven.pkg.github.com/Forsakringskassan/repository</url>
+        </repository>
+    </repositories>
     <distributionManagement>
         <repository>
-            <id>github-forsakringskassan</id>
-            <name>GitHub Packages</name>
+            <id>github--Forsakringskassan--repository</id>
             <url>https://maven.pkg.github.com/Forsakringskassan/repository</url>
         </repository>
     </distributionManagement>
+
 </project>
