@@ -2,6 +2,30 @@
 
 Changelog of rimfrost-common.
 
+## 0.0.2 (2026-01-07)
+
+### Bug Fixes
+
+-  push artifact ([93d99](https://github.com/Forsakringskassan/rimfrost-common/commit/93d99f4a46662ae) Ulf Slunga)  
+-  push artifact ([b1387](https://github.com/Forsakringskassan/rimfrost-common/commit/b1387a2b78146d5) Ulf Slunga)  
+-  push artifact ([9ae6f](https://github.com/Forsakringskassan/rimfrost-common/commit/9ae6f20ba927570) Ulf Slunga)  
+-  push artifact ([23d4f](https://github.com/Forsakringskassan/rimfrost-common/commit/23d4f28c83ea27c) Ulf Slunga)  
+
+### Other changes
+
+**Merge remote-tracking branch 'origin/fix/pushing-artifact' into fix/pushing-artifact**
+
+* # Conflicts: 
+* #	.github/workflows/maven-release.yaml 
+
+[dfebb](https://github.com/Forsakringskassan/rimfrost-common/commit/dfebb6b2ea33b83) Ulf Slunga *2026-01-07 12:40:16*
+
+**Update maven-release.yaml**
+
+
+[9fa72](https://github.com/Forsakringskassan/rimfrost-common/commit/9fa728586431673) Ulf Slunga *2026-01-07 12:39:34*
+
+
 ## 0.0.1 (2026-01-07)
 
 ### Other changes
