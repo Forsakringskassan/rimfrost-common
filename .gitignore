@@ -33,3 +33,4 @@ src/generated-source
 /.quarkus/cli/plugins/
 # TLS Certificates
 .certs/
+/rimfrost-common-regel-init/build/
