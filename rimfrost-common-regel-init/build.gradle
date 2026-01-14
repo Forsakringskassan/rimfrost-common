@@ -10,7 +10,7 @@ repositories {
 dependencies {
     //implementation enforcedPlatform("io.quarkus:quarkus-bom:3.30.6") // BOM to manage versions
     //implementation "io.quarkus:quarkus-arc"
-    //implementation "io.quarkus:quarkus-smallrye-reactive-messaging-kafka"
+    implementation "io.quarkus:quarkus-messaging-kafka:3.30.6"
 
     implementation "org.slf4j:slf4j-api:2.0.9"
     runtimeOnly "ch.qos.logback:logback-classic:1.4.11"
