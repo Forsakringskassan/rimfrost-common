@@ -16,3 +16,5 @@ pluginManagement {
         mavenCentral()
     }
 }
+
+include('rimfrost-common-regel-init')
