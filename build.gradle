@@ -2,6 +2,8 @@ plugins {
     id "se.fk.gradle.bundle-jar" version "1.18.1"
 }
 
+
+
 javaExtension {
     javaVersion = 21
 }
@@ -22,4 +24,12 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter:6.0.2"
     testImplementation "org.assertj:assertj-core:3.27.6"
+}
+
+tasks.matching { it.name == "showUpdateableDependencies" }.configureEach {
+    enabled = false
+}
+
+tasks.matching { it.name == "bundleJar" }.configureEach {
+    includeDependencies = true
 }
