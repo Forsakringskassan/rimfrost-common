@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import se.fk.github.common.regel.logic.dto.CreateRegelDataRequest;
 import se.fk.github.logging.callerinfo.model.MDCKeys;
 import se.fk.rimfrost.regel.common.RegelRequestMessagePayload;
 
@@ -13,14 +14,14 @@ public class RegelMessageHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RegelMessageHandler.class);
 
-    //@Inject
-    //RtfService rtfService;
-
     @Inject
     RegelKafkaMapper mapper;
 
+    @Inject
+    RegelRequestProcessor processor;
+
     /**
-     * Handle a received RtfManuellRequestMessagePayload
+     * Handle a received RegelRequestMessagePayload
      */
     public void handle(RegelRequestMessagePayload payload) {
         try {
@@ -28,13 +29,13 @@ public class RegelMessageHandler {
             MDC.put(MDCKeys.PROCESSID.name(), payload.getData().getKundbehovsflodeId());
 
             LOGGER.info(
-                    "RtfManuellRequestMessagePayload received with KundbehovsflodeId: {}",
+                    "RegelRequestMessagePayload received with KundbehovsflodeId: {}",
                     payload.getData().getKundbehovsflodeId()
             );
 
             // Map to service request and delegate
             var request = mapper.toCreateRegelDataRequest(payload);
-            //rtfService.createRtfData(request);
+            processor.process(request);
 
         } finally {
             // Always clear MDC to avoid leaking to other threads
