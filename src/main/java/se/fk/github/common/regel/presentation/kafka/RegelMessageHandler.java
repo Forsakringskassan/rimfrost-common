@@ -19,12 +19,12 @@ public class RegelMessageHandler
    RegelKafkaMapper mapper;
 
    @Inject
-   RegelRequestProcessor processor;
+   RegelRequestHandlerInterface regelRequestHandlerInterface;
 
    /**
     * Handle a received RegelRequestMessagePayload
     */
-   public void handle(RegelRequestMessagePayload payload)
+   public void consumeRegelRequest(RegelRequestMessagePayload payload)
    {
       try
       {
@@ -37,7 +37,7 @@ public class RegelMessageHandler
 
          // Map to service request and delegate
          var request = mapper.toCreateRegelDataRequest(payload);
-         processor.process(request);
+         regelRequestHandlerInterface.createRegel(request);
 
       }
       finally

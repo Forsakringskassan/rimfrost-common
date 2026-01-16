@@ -22,6 +22,6 @@ public class RegelConsumer
    @Blocking
    public void onMessage(RegelRequestMessagePayload payload)
    {
-      handler.handle(payload);
+      handler.consumeRegelRequest(payload);
    }
 }
