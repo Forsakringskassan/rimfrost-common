@@ -2,8 +2,8 @@ package se.fk.github.common.regel.presentation.kafka;
 
 import se.fk.github.common.regel.logic.dto.CreateRegelDataRequest;
 
-public interface RegelRequestProcessor {
+public interface RegelRequestProcessor
+{
 
-    void process(CreateRegelDataRequest request);
+   void process(CreateRegelDataRequest request);
 }
-

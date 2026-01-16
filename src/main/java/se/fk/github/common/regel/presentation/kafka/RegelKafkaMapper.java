@@ -5,7 +5,6 @@ import se.fk.github.common.regel.logic.dto.CreateRegelDataRequest;
 import se.fk.rimfrost.regel.common.RegelRequestMessagePayload;
 import se.fk.github.common.regel.logic.dto.ImmutableCreateRegelDataRequest;
 
-
 import java.util.UUID;
 
 @ApplicationScoped
@@ -26,7 +25,7 @@ public class RegelKafkaMapper
             .build();
    }
 
-/*   public UpdateRegelDataRequest toUpdateRtfDataRequest(OperativtUppgiftslagerResponseMessage oulResponse)
+   /*   public UpdateRegelDataRequest toUpdateRtfDataRequest(OperativtUppgiftslagerResponseMessage oulResponse)
    {
       return ImmutableUpdateRtfDataRequest.builder()
             .kundbehovsflodeId(UUID.fromString(oulResponse.getKundbehovsflodeId()))
